@@ -437,23 +437,9 @@ External Interface Requirements
 
 User Interfaces 
 
- 
+![alt text](https://github.com/yyppsk/Multi-Utility-Application/blob/master/Blue%20Pie%20Chart%20Presentation.jpg) 
+![alt text](https://github.com/yyppsk/Multi-Utility-Application/blob/master/Flowchart.png) 
 
- 
-
- 
-
- 
-
-Diagram
-
-Description automatically generated 
-
- 
-
- 
-
- 
 
 User interface follows a menu driven approach, which makes it easier to follow up and navigate through the program. 
 

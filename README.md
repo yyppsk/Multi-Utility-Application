@@ -237,43 +237,49 @@ Each menu subdivides into further menu’s if needed, and every function is call
 
  
 
-Suppose: 
+Suppose:
 
- 
-
-Menu 1, Menu 2, Menu 3 … Menu n  
+Menu 1, Menu 2, Menu 3 …......Menu n  
 
 Each menu entry can contain a sub menu. 
 
- 
-
-Menu 1: Menu 1.1 Menu 1.2 Menu 1.3…. Menu 1.n 
-
+*Menu 1: Menu 1.1 Menu 1.2 Menu 1.3...............Menu 1.n*
+Where n is any number of functions.
+> * Menu 1
+> * Menu 2
+>  > * Menu 2.1
+>  > * Menu 2.2
+>  > > * Menu 2.2.1
+>  > > * Menu 2.2.2
+>  > > * .......
+>  > > * .......
+>  > > * .......
+>  > > * Menu n.x.y
  
 
 For each menu, there also exists a calling function statement. 
 
  
 
-Menu 1 
+1. Menu 1 
 
-Menu 2 
+2. Menu 2 
 
-Sub Menu 
+ 2.1 Sub Menu 
 
-Feature 1  à Calls function feature1 () 
+  2.1.1 Feature 1  &rarr; Calls function feature1 () 
 
-Feature 2 à Calls function feature2 () 
+  2.1.2 Feature 2 &rarr; Calls function feature2 () 
 
-Feature 3 à Calls function feature3 () 
+  2.1.3 Feature 3 &rarr; Calls function feature3 () 
 
-Feature 4  à Calls function feature4 () 
+  2.1.4 Feature 4  &rarr; Calls function feature4 () 
 
-. 
+  2.1.5 ...
 
-. 
+  2.1.6 ...
 
-Feature n à Calls function feature n () 
+  2.1.n Feature n &rarr; Calls function feature n () 
 
  
 

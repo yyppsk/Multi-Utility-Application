@@ -1,11 +1,14 @@
-Software Requirements Specification for 
-Multi Utility Application 
-Version 1.0 
-Prepared by Pranjal Pratap Singh 
-Samriddhi Shukla 
-Sonam Verma 
-Shivansh Bajpai 
-Garvit Dwivedi 
+# Software Requirements Specification for 
+
+Multi Utility Application
+
+Version 1.0
+
+*Prepared by Pranjal Pratap Singh
+*Samriddhi Shukla 
+*Sonam Verma 
+*Shivansh Bajpai 
+*Garvit Dwivedi 
 
 PSIT COLLEGE OF ENGINEERING 
 MINI PROJECT 2021-2022 

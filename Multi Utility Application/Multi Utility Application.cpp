@@ -93,8 +93,12 @@ public:             // Access specifier
     }
     void sin() {
         double a = 0;
-        cout << "Enter the number for sin : ";
+        cout << "Enter the number for sin(in Degrees) : "<<endl;
+        // converting degrees to radians
         cin >> a;
+        double x = a * 3.14159 / 180;
+        long double result = std::sin(x);
+        cout << "Sin of " << a << " is: " << result;
     }
     void cos() {
         double a = 0;

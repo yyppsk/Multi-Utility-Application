@@ -49,7 +49,6 @@ public:             // Access specifier
     {
         printf("Enter the base and the power:");
         double a, b;
-        int x;
         scanf_s("%lf %lf", &a, &b);
         printf("The POWER is %.1lf\n",pow(a, b));
     }
@@ -92,19 +91,66 @@ public:             // Access specifier
         cout << "\ncube root " << a << " is " << cbrt(a);
     }
     void sin() {
-        double a = 0;
-        cout << "Enter the number for sin(in Degrees) : "<<endl;
+        system("CLS");
+        int a = 0;
+        cout << "Enter the number for sin(in Degrees) : ";
         // converting degrees to radians
         cin >> a;
-        double x = a * 3.14159 / 180;
-        long double result = std::sin(x);
-        cout << "Sin of " << a << " is: " << result;
+        // Below Switch tree defines the Pre-defined values for Trigonometric functions.
+        switch (a)
+        {
+            case 360:
+                printf("Value of Sin for %d%c is %d\n",a,248,0);
+                break;
+            case 45:
+                printf("Value of Sin for %d%c is 1/%c2\n",a,248,251);
+                break;
+            case 30:
+                printf("Value of Sin for %d%c is 1/2\n",a,248);
+                break;
+            case 60:
+                printf("Value of Sin for %d%c is %c3/2\n", a,248, 251);
+                break;
+        }
+        if (a != 360)
+        {
+            double x = a * 3.14159 / 180;
+            long double result = std::sin(x);
+            printf("Sin of %d is %.3f", a, result);
+        }
     }
     void cos() {
-        double a = 0;
-        cout << "Enter the number for cos : ";
+        system("CLS");
+        int a = 0;
+        cout << "Enter the number for Cos(in Degrees) : ";
+        // converting degrees to radians
         cin >> a;
-
+        // Below Switch tree defines the Pre-defined values for Trigonometric functions.
+        switch (a)
+        {
+        case 90:
+            printf("Value of Cos for %d%c is %d\n", a, 248, 0);
+            break;
+        case 360:
+            printf("Value of Cos for %d%c is %d\n", a, 248, 1);
+            break;
+        case 30:
+            printf("Value of Cos for %d%c is %c3/2\n", a, 248, 251);
+            break;
+        case 60:
+            printf("Value of Cos for %d%c is 1/2\n", a, 248);
+            break;
+        case 45:
+            printf("Value of Cos for %d%c is 1/%c2\n", a, 248, 251);
+            break;
+        }
+        if (a != 90)
+        {
+            double x = a * 3.14159 / 180;
+            long double result = std::cos(x);
+            printf("Cos of %d is %.3f", a, result);
+        }
+ 
     }
     void tan() {
         double a = 0;
@@ -239,6 +285,9 @@ void submenu_ADV_SCI_CALC()
         break;
     case 12:
         calc.sin();
+        break;
+    case 13:
+        calc.cos();
         break;
     default:
         printf("INVALID INPUT.");

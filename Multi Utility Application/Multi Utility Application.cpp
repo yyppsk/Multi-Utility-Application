@@ -116,7 +116,7 @@ public:             // Access specifier
         {
             double x = a * 3.14159 / 180;
             long double result = std::sin(x);
-            printf("Sin of %d is %.3f", a, result);
+            printf("Sin of %d%c is %.2f", a,248, result);
         }
     }
     void cos() {
@@ -148,25 +148,126 @@ public:             // Access specifier
         {
             double x = a * 3.14159 / 180;
             long double result = std::cos(x);
-            printf("Cos of %d is %.3f", a, result);
+            printf("Cos of %d%c is %.2f", a,248, result);
         }
- 
+   
     }
     void tan() {
-        double a = 0;
-        cout << "Enter the number for tan :";
+        system("CLS");
+        int a = 0;
+        cout << "Enter the number for Tan(in Degrees) : ";
+        // converting degrees to radians
         cin >> a;
+        // Below Switch tree defines the Pre-defined values for Trigonometric functions.
+        switch (a)
+        {
+        case 0:
+            printf("Value of Tan for %d%c is %d\n", a, 248, 0);
+            break;
+        case 45:
+            printf("Value of Tan for %d%c is %d\n", a, 248, 1);
+            break;
+        case 30:
+            printf("Value of Tan for %d%c is 1/%c3\n", a, 248,251);
+            break;
+        case 60:
+            printf("Value of Tan for %d%c is %c3\n", a, 248,251);
+            break;
+        case 90:
+            printf("Value of Tan for %d%c is Not Defined!\n",a,248);
+            break;
+        case 180:
+            printf("Value of Tan for %d%c is 0\n",a,248);
+            break;
+        case 360:
+            printf("Value of Tan for %d%c is 1\n",a,248);
+            break;
+
+        }
+        if (a != 360 && a !=90 && a != 180)
+        {
+            double x = a * 3.14159 / 180;
+            long double result = std::tan(x);
+            printf("Tan of %d%c is %.3f", a, 248,result);
+        }
 
     }
     void cot() {
-        double a = 0;
-        cout << "Enter the number for cot :";
+        system("CLS");
+        int a = 0;
+        cout << "Enter the number for Cot(in Degrees) : ";
+        // converting degrees to radians
         cin >> a;
+        // Below Switch tree defines the Pre-defined values for Trigonometric functions.
+        switch (a)
+        {
+        case 90:
+            printf("Value of Cot for %d%c is %d\n", a, 248, 0);
+            break;
+        case 45:
+            printf("Value of Cot for %d%c is %d\n", a, 248, 1);
+            break;
+        case 60:
+            printf("Value of Cot for %d%c is 1/%c3\n", a, 248, 251);
+            break;
+        case 30:
+            printf("Value of Cot for %d%c is %c3\n", a, 248, 251);
+            break;
+        case 0:
+            printf("Value of Cot for %d%c is Not Defined!\n", a, 248);
+            break;
+        case 180:
+            printf("Value of Cot for %d%c is Not Defined!\n", a, 248);
+            break;
+        case 360:
+            printf("Value of Cot for %d%c is Not Defined!\n", a, 248);
+            break;
+
+        }
+        if (a != 360 && a != 0 && a != 180)
+        {
+            double x = a * 3.14159 / 180;
+            long double result = std::tan(x);
+            printf("Cot of %d%c is %.3f", a, 248, result);
+        }
     }
     void sec() {
-        double a = 0;
-        cout << "Enter the number for sec :";
+        system("CLS");
+        int a = 0;
+        cout << "Enter the number for Sec(in Degrees) : ";
+        // converting degrees to radians
         cin >> a;
+        // Below Switch tree defines the Pre-defined values for Trigonometric functions.
+        switch (a)
+        {
+        case 0:
+            printf("Value of Sec for %d%c is %d\n", a, 248, 1);
+            break;
+        case 90:
+            printf("Value of Sec for %d%c is Not defined!\n", a, 248);
+            break;
+        case 360:
+            printf("Value of Sec for %d%c is %d\n", a, 248, 1);
+            break;
+        case 30:
+            printf("Value of Sec for %d%c is 2/%c3\n", a, 248, 251);
+            break;
+        case 60:
+            printf("Value of Sec for %d%c is 2\n", a, 248);
+            break;
+        case 45:
+            printf("Value of Sec for %d%c is %c2\n", a, 248, 251);
+            break;
+        case 180:
+            printf("Value of Sec for %d%c is -1\n", a, 248);
+            break;
+        }
+        if (a != 90 && a!=270)
+        {
+            double x = a * 3.14159 / 180;
+            long double result = 1/std::cos(x);
+            printf("Sec of %d%c is %.2f", a, 248, result);
+        }
     }
     void cosec() {
         double a = 0;
@@ -288,6 +389,15 @@ void submenu_ADV_SCI_CALC()
         break;
     case 13:
         calc.cos();
+        break;
+    case 14:
+        calc.tan();
+        break;
+    case 15:
+        calc.cot();
+        break;
+    case 16:
+        calc.sec();
         break;
     default:
         printf("INVALID INPUT.");
